@@ -1,0 +1,14 @@
+{
+  "name": "crud-21i",
+  "version": "1.0.0",
+  "description": "Nuestro primer CRUD con la comisión 21i",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Comisión 21",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
