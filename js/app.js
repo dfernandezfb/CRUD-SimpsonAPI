@@ -59,10 +59,11 @@ const updateCharacter = async(id,updatedCharacter) =>{
         body:JSON.stringify(updatedCharacter)
     })
 }
-
+/*
 updateCharacter(4,{
     id:4,
     name:'Rafa Gorgory',
     age:8,
     address: undefined
 })
+*/
