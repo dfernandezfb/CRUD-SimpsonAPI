@@ -1,0 +1,45 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+.background{
+  background-image: url('./../assets/img/cartoon-couch.jpg');
+  background-size: cover;
+  background-position: 0% 20%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+.background-black{
+  background-color: rgba(0,0,0,.7);
+  width: 100vw;
+  height: 100vh;
+}
+.title{
+  font-size: 100px;
+  font-weight: bold;
+  animation: showIt 2s ease-in-out;
+}
+.btns{
+  font-size: 30px;
+}
+
+.background-modal{
+  background-image: url('./../assets/img/allcharacters.jpg');
+}
+
+@keyframes showIt{
+  0%{
+    opacity:0;
+  }
+  25%{
+    opacity:1;
+  }
+  50%{
+    opacity:.25;
+  }
+  75%{
+    opacity:1;
+  }
+}
