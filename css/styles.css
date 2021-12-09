@@ -1,0 +1,16 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+.background{
+  background-image: url('./../assets/img/cartoon-couch.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: 0% 20%;
+}
+.background-black{
+  background-color: rgba(0, 0, 0, .5);
+  width: 100vw;
+  height: 100vh;
+}

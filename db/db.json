@@ -4,36 +4,29 @@
       "id": 1,
       "name": "Homero Simpson",
       "age": 37,
-      "address": "Av. Siempreviva 742"
+      "address": "Av. Siempreviva 742",
+      "image":"./assets/img/homero.jpg"
     },
     {
       "id": 2,
       "name": "Bart Simpson",
       "age": 10,
-      "address": "Av. Siempreviva 742"
+      "address": "Av. Siempreviva 742",
+      "image":"./assets/img/bart.jpg"
     },
     {
       "id": 3,
       "name": "Lisa Simpson",
       "age": 8,
-      "address": "Av Siempreviva 742"
+      "address": "Av Siempreviva 742",
+      "image":"./assets/img/lisa.jpg"
     },
     {
       "id": 4,
       "name": "Rafa Gorgory",
-      "age": 8
-    },
-    {
-      "id": 5,
-      "name": "Ned Flanders",
-      "age": 60,
-      "address": "Av Siempreviva 745"
-    },
-    {
-      "id": 6,
-      "name": "Ned Flanders",
-      "age": 60,
-      "address": "Av Siempreviva 745"
+      "age": 8,
+      "address":"none",
+      "image":"./assets/img/rafa.jpeg"
     }
   ]
 }
