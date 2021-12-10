@@ -1,69 +1,70 @@
-const url = 'http://localhost:3000'
-
+const url = "http://localhost:3000/characters";
 
 //* POST
 
-const postCharacter = async(character) =>{
-    const response = await fetch(url + '/characters',{
-        method:'POST',
-        headers:{
-            'Content-Type':'application/json'
-        },
-        body:JSON.stringify(character)
-    })
-    const data = await response.json();
-    console.log(data);
-}
-/*
-postCharacter({
-    id:7,
-    name:'Ned',
-    lastname:'Flanders',
-    age:60,
-    address:'Av Siempreviva 745'
-})
-*/
-//* READ
-const getCharacters = async () =>{
-    let response = await fetch(url + '/characters');
-    let data = await response.json();
-    console.log(data);
+const saveCharacter = async() =>{
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('age').value;
+  const address = document.getElementById('address').value;
+  const image = document.getElementById('image').value;
+  const character = {
+    name,
+    age,
+    address,
+    image
+  }
+  await fetch(url,{
+      method:'POST',
+      headers:{
+          'Content-Type':'application/json'
+      },
+      body:JSON.stringify(character)
+  })
 }
 
-getCharacters();
 
-const getCharacter = async (id)=>{
-    let response = await fetch(`${url}/characters/${id}`);
-    let data = await response.json();
-    console.log(data);
+const getRandomCharacter = async ()=>{
+  const id = Math.floor(Math.random()*5)
+  let response = await fetch(`${url}/${id}`);
+  let data = await response.json();
+  const random = document.createElement('div');
+  random.innerHTML=`
+  <div class="card m-3" style="width: 18rem;">
+    <img src=${data.image} class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${data.name}</h5>
+      <p class="card-text">Address: ${data.address}</p>
+    </div>
+  </div>
+  `
+  document.querySelector('.random-character').appendChild(random);
 }
 
-getCharacter(2);
 
-//* DELETE
+// //* DELETE
 
-const deleteCharacter = async(id) =>{
-    const response = await fetch(`${url}/characters/${id}`,{
-        method:'DELETE'
-    })
-}
+// const deleteCharacter = async(id) =>{
+//     const response = await fetch(`${url}/characters/${id}`,{
+//         method:'DELETE'
+//     })
+// }
 
-//* PUT
+// //* PUT
 
-const updateCharacter = async(id,updatedCharacter) =>{
-    const response = await fetch(`${url}/characters/${id}`,{
-        method:'PUT',
-        headers:{
-            'Content-Type':'application/json',
-        },
-        body:JSON.stringify(updatedCharacter)
-    })
-}
-/*
-updateCharacter(4,{
-    id:4,
-    name:'Rafa Gorgory',
-    age:8,
-    address: undefined
-})
-*/
+// const updateCharacter = async(id,updatedCharacter) =>{
+//     const response = await fetch(`${url}/characters/${id}`,{
+//         method:'PUT',
+//         headers:{
+//             'Content-Type':'application/json',
+//         },
+//         body:JSON.stringify(updatedCharacter)
+//     })
+// }
+// /*
+// updateCharacter(4,{
+//     id:4,
+//     name:'Rafa Gorgory',
+//     age:8,
+//     address: undefined
+// })
+// */
